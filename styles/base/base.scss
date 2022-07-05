@@ -6,9 +6,19 @@ html, body {
     height: 100%;
 }
 
+body {
+    font-family: Play, Arial, Helvetica, sans-serif;
+    font-size: $mainSize;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
 a {
     color: inherit;
+    font-style: normal;
     text-decoration: none;
+    transition: color .3s;
     &:hover {
         color: inherit;
     }
@@ -20,7 +30,6 @@ a {
 ul {
     padding: 0;
     margin: 0;
-    
     li {
         list-style: none;
     }
@@ -45,3 +54,21 @@ button {
     border: none;
 }
 
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: $containerWidth + 20px;
+    min-height: 100%;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+.container {
+    width: $containerWidth;
+    margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+    width: 640px;
+    justify-content: space-between;
+}
+
+.menu__link {
+    font-size: 18px;
+    &:hover {
+        color: $red;
+    }
+}
+
+.contacts {
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    &:hover {
+        .contacts__link {
+            color: $red;
+        }
+    }
+}
+
+.contacts__icon {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}

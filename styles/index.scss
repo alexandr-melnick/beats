@@ -1,2 +1,21 @@
+// colors
+$red: #E01F3D;
+$greyMain: #F8FAF9;
+$greySecondary: #F2F5F4;
+$black: #292929;
+$text: #666;
+
+// font-size
+$mainSize: 16px;
+$secondTitleSize: 36px;
+$subTitleSize: 24px;
+$titleSize: 52px;
+
+// width
+$containerWidth: 940px;
+
+// imports
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import "./base/normalize.css";
 @import "./base/base.scss";
+@import "./hero/header.scss";
