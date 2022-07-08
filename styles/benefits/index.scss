@@ -1,0 +1,98 @@
+.benefits {
+    padding: 10% 0;
+}
+
+.benefits__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits__title-wrap {
+    margin-bottom: 10%;
+}
+
+.benefits__title {
+    margin-bottom: 10px;
+    max-width: 590px;
+}
+
+.benefits__text {
+    text-align: center;
+    color: #666;
+    max-width: 590px;
+}
+
+.benefits__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.benefit__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: $greySecondary;
+    margin-bottom: 25px;
+}
+
+.benefit__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit__title {
+    margin-bottom: 5px;
+}
+
+.benefit__desc {
+    text-align: center;
+    color: #666;
+}
+
+@mixin delimer($s) {
+    content: "";
+    display: block;
+    width: $s;
+    height: $s;
+    background-color: $greySecondary;
+    border-radius: 50%;
+}
+
+@mixin subDelimer($b) {
+    @include delimer(15px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @if $b == 1 {
+        right: -20px;
+    } 
+    @if $b == 2 {
+        left: -20px;
+    }
+}
+
+.benefit__delimer {
+    @include delimer(25px);
+    position: relative;
+    margin-top: 5%;
+    &::after {
+        @include subDelimer(2);
+        
+    }
+    &::before {
+        @include subDelimer(1);
+    }
+}

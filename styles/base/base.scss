@@ -9,6 +9,7 @@ html, body {
 body {
     font-family: Play, Arial, Helvetica, sans-serif;
     font-size: $mainSize;
+    color: $black;
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
@@ -19,12 +20,6 @@ a {
     font-style: normal;
     text-decoration: none;
     transition: color .3s;
-    &:hover {
-        color: inherit;
-    }
-    &:visited {
-        color: inherit;
-    }
 }
 
 ul {
@@ -55,6 +50,7 @@ button {
 }
 
 section {
+    display: flex;
     min-height: 100vh;
     width: 100%;
 }
@@ -62,13 +58,45 @@ section {
 .wrapper {
     position: relative;
     width: 100%;
-    min-height: $containerWidth + 20px;
     min-height: 100%;
     overflow: hidden;
-    padding-top: 25px;
 }
 
 .container {
     width: $containerWidth;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    display: flex;
+    width: 165px;
+    height: 55px;
+    border-radius: 100px;
+    background-color: $red;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color .3s;
+    transition: background-color .3s;
+    &:hover {
+        color: $red;
+        background-color: white;
+        border: 1px solid $red;
+    }
+}
+
+.title {
+    font-size: $titleSize;
+    text-transform: uppercase;
+    line-height: 52px;
+    font-weight: 700;
+}
+
+.sub-title {
+    font-size: $subTitleSize;
+    font-weight: 700;
 }
