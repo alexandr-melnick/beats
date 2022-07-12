@@ -55,6 +55,12 @@ section {
     width: 100%;
 }
 
+input, textarea {
+    &:focus-visible {
+        outline: none;
+    }
+}
+
 .wrapper {
     position: relative;
     width: 100%;
@@ -69,23 +75,37 @@ section {
     flex-direction: column;
 }
 
+@mixin btn($c) {
+    background-color: $c;
+    @if ($c == $red) {
+        color: white;
+        transition: background-color .3s;
+        &:hover {
+            background-color: #CA1B36;
+        }
+    } @else {
+        color: $red;
+        transition: color .3s;
+        &:hover {
+            color: #CA1B36;
+        }
+    }
+}
+
 .btn {
     display: flex;
     width: 165px;
     height: 55px;
     border-radius: 100px;
-    background-color: $red;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-transform: uppercase;
     font-weight: 700;
-    transition: color .3s;
-    transition: background-color .3s;
-    &:hover {
-        color: $red;
-        background-color: white;
-        border: 1px solid $red;
+    text-transform: uppercase;
+    &-red {
+        @include btn($red)
+    }
+    &-white {
+        @include btn(white)
     }
 }
 
@@ -94,6 +114,7 @@ section {
     text-transform: uppercase;
     line-height: 52px;
     font-weight: 700;
+    text-align: center;
 }
 
 .sub-title {

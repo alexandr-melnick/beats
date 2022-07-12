@@ -1,0 +1,52 @@
+.section-form {
+    background: url('../../images/bgs/form-bg.png') center center / cover no-repeat;
+    color: white;
+}
+
+.section-form__container {
+    padding: 65px 0;
+}
+
+.form__main-title {
+    margin-bottom: 65px;
+}
+
+.form {
+    display: flex;
+    gap: 25px;
+}
+
+.form__col {
+    flex-grow: 1;
+    max-width: 450px;
+}
+
+.form__row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form__label {
+    flex-grow: 1;
+    width: 20%;
+}
+
+.form__title {
+    margin-bottom: 5px;
+}
+
+.form__input {
+    width: 100%;
+    border-radius: 4px;
+    min-height: 60px;
+    border: 3px solid transparent;
+    font-size: 14px;
+    padding: 10px;
+    &:focus {
+        border-color: $red;
+    }
+}
